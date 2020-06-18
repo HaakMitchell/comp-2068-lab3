@@ -8,7 +8,7 @@ exports.show = async (req, res) => {
     pageTitle: product.title,
     product: product
   });
-  console.log(product.description);
+ 
 };
 
 exports.new = (req, res) => {
@@ -18,7 +18,6 @@ exports.new = (req, res) => {
 };
 
 exports.create = async (req, res) => {
-  console.log(`body: ${JSON.stringify(req.body, null, 2)}`);
   try {
     const product = await Product.create(req.body);
     res.redirect(`/products/${product.id}`);
