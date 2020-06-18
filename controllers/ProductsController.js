@@ -8,6 +8,7 @@ exports.show = async (req, res) => {
     pageTitle: product.title,
     product: product
   });
+  console.log(product.description);
 };
 
 exports.new = (req, res) => {
